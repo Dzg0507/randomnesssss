@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+</head>
+<body>
+<script>
+    const config = {
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      physics: {
+        default: 'arcade',
+        arcade: {
+          gravity: { y: 300 },
+          debug: false
+        }
+      },
+      scene: {
+        preload: preload,
+        create: create,
+        update: update
+      }
+    };
+
+    const game = new Phaser.Game(config);
+
+    function preload() {
+      this.load.image('sky', 'res/assets/images/sky.png');
+      this.load.image('bird', 'res/assets/images/bird.png');
+    }
+
+    function create() {
+      this.add.image(400, 300, 'sky');
+      this.bird = this.physics.add.sprite(100, 450, 'bird');
+      this.bird.setCollideWorldBounds(true);
+      this.input.on('pointerdown', () => {
+        this.bird.setVelocityY(-300);
+      });
+    }
+
+    function update() {
+      this.bird.angle = Phaser.Math.Clamp(this.bird.body.velocity.y, -90, 30);
+    }
+  </script>
+</body>
+</html>
