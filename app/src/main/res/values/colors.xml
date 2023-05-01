@@ -2,4 +2,38 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="violet">#FF8A2BE2</color>
+    <color name="purple">#FF800080</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="turquoise">#FF40E0D0</color>
+    <color name="green">#FF00FF00</color>
+    <color name="lime">#FF00FF7F</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="orange">#FFFFA500</color>
+    <color name="red">#FFFF0000</color>
+    <color name="pink">#FFFFC0CB</color>
+    <color name="fuchsia">#FFFF00FF</color>
+    <color name="coral">#FFFF7F50</color>
+    <color name="maroon">#FF800000</color>
+    <color name="navy">#FF000080</color>
+    <color name="teal">#FF008080</color>
+    <color name="olive">#FF808000</color>
+    <color name="indigo">#FF4B0082</color>
+    <color name="brown">#FFA52A2A</color>
+    <color name="grey">#FF808080</color>
+    <color name="dark_blue">#2C3E50</color> <!-- Midnight Blue -->
+    <color name="light_blue">#3498DB</color> <!-- Curious Blue -->
+    <color name="dark_green">#2ECC71</color> <!-- Emerald -->
+    <color name="light_green">#1ABC9C</color> <!-- Mountain Meadow -->
+    <color name="dark_red">#C0392B</color> <!-- Flush Mahogany -->
+    <color name="light_red">#E74C3C</color> <!-- Cinnabar -->
+    <color name="dark_yellow">#F1C40F</color> <!-- Energy Yellow -->
+    <color name="light_yellow">#F7DC6F</color> <!-- Champagne -->
+    <color name="dark_grey">#A9A9A9</color>
+
+
+
+
+
+
 </resources>

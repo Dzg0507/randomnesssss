@@ -1,11 +1,11 @@
 package com.example.cheapflyfungiveaway;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -21,25 +21,23 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String PAYPAL_CLIENT_ID = "YOUR_PAYPAL_CLIENT_ID";
+    private static final int PAYPAL_REQUEST_CODE = 123;
+    private static final PayPalConfiguration config = new PayPalConfiguration()
+            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
+            .clientId(PAYPAL_CLIENT_ID);
+    private DatabaseReference mDatabase;
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
- //       mAuth = FirebaseAuth.getInstance();
- //       mDatabase = FirebaseDatabase.getInstance().getReference();
+        //       mAuth = FirebaseAuth.getInstance();
+        //       mDatabase = FirebaseDatabase.getInstance().getReference();
 
     }
-
-    private DatabaseReference mDatabase;
-    private FirebaseAuth mAuth;
-    private static final String PAYPAL_CLIENT_ID = "YOUR_PAYPAL_CLIENT_ID";
-    private static final int PAYPAL_REQUEST_CODE = 123;
-
-    private static PayPalConfiguration config = new PayPalConfiguration()
-            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
-            .clientId(PAYPAL_CLIENT_ID);
-
 
     public void onDonateButtonClicked(View view) {
         PayPalPayment payment = new PayPalPayment(new BigDecimal("0.10"), "USD", "Donation",
@@ -64,15 +62,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-private void saveDonationData(String userId,double amount){
- //       String key=mDatabase.child("donations").push().getKey();
-        DonationActivity donation=new DonationActivity(userId,amount);
-        Map<String, Object> donationValues=donation.toMap();
+    private void saveDonationData(String userId, double amount) {
+        //       String key=mDatabase.child("donations").push().getKey();
+        DonationActivity donation = new DonationActivity(userId, amount);
+        Map<String, Object> donationValues = donation.toMap();
 
-        Map<String, Object> childUpdates=new HashMap<>();
-   //     childUpdates.put("/donations/"+key,donationValues);
+        Map<String, Object> childUpdates = new HashMap<>();
+        //     childUpdates.put("/donations/"+key,donationValues);
 
-  //      mDatabase.updateChildren(childUpdates);
-        }
+        //      mDatabase.updateChildren(childUpdates);
+    }
 
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>My Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <script src="StartMenu.js"></script>
+    <script src="GameScene.js"></script>
+    <script>
+
+      const game = new Phaser.Game(config);
+      const config = {
+        // Game configuration goes here
+        scene: [StartMenu, GameScene]
+      };
+    </script>
+</head>
+<body>
+<!-- Game HTML goes here -->
+</body>
+</html>

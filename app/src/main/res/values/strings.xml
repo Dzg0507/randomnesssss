@@ -2,4 +2,11 @@
     <string name="app_name">Cheap Fly Fun Giveaway</string>
     <string name="donate_button_text">Donate</string>
     <string name="donation_amount_label_text">Donation Amount</string>
+    <string name="create_account">Create</string>
+    <string name="login">Login</string>
+    <string name="create_account1">Create Account</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+
 </resources>
