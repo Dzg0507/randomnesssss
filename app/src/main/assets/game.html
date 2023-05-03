@@ -6,13 +6,16 @@
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
     <script src="StartMenu.js"></script>
     <script src="GameScene.js"></script>
+    <script src="EndgameScene.js"></script>
     <script>
 
-      const game = new Phaser.Game(config);
       const config = {
         // Game configuration goes here
-        scene: [StartMenu, GameScene]
+        scene: [StartMenu, GameScene, EndgameScene]
       };
+
+      const game = new Phaser.Game(config);
+
     </script>
 </head>
 <body>

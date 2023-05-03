@@ -46,7 +46,5 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Create the accounts table
-        db.execSQL("CREATE TABLE IF NOT EXISTS accounts (username TEXT PRIMARY KEY, password TEXT)");
     }
 }
